@@ -5,84 +5,156 @@ import Demo from './component/Demo';
 function App() {
   let data = [
     {
-      id: 101,
-      name: 'Abacavir',
-      quantity: 25,
-      price: 150,
-      expiry: 2022,
+      name: "amit",
+      age: 35,
+      salary: 40000,
+      bonus: 1000,
       status: true
     },
     {
-      id: 102,
-      name: 'Eltrombopag',
-      quantity: 90,
-      price: 550,
-      expiry: 2021,
-      status: true
-    },
-    {
-      id: 103,
-      name: 'Meloxicam',
-      quantity: 85,
-      price: 450,
-      expiry: 2025,
+      name: "ajay",
+      age: 25,
+      salary: 38000,
+      bonus: 2000,
       status: false
     },
     {
-      id: 104,
-      name: 'Allopurinol',
-      quantity: 50,
-      price: 600,
-      expiry: 2023,
+      name: "mayur",
+      age: 23,
+      salary: 50000,
+      bonus: 500,
       status: true
     },
     {
-      id: 105,
-      name: 'Phenytoin',
-      quantity: 63,
-      price: 250,
-      expiry: 2021,
-      status: false
+      name: "jay",
+      age: 29,
+      salary: 35000,
+      bonus: 600,
+      status: true
+    },
+    {
+      name: "raj",
+      age: 33,
+      salary: 22000,
+      bonus: 2000,
+      status: true
     }
   ];
-  let fdata = data.filter((a, i) => a.status === true && a.expiry >= 2022);
-  
-  let totalprice = fdata.reduce((acc, p, i) => acc + p.price, 0);
-  console.log(totalprice)
+
+  let fdata = data.filter((b, i) => b.status === true);
+
+  let totalamount = fdata.reduce((acc, t, i) => acc + t.salary + t.bonus, 0)
+
   return (
     <div>
-      <table id="mytable" border="1">
+      <table border="1">
         <tr>
-          <th>Id</th>
           <th>Name</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Expiry</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Bonus</th>
           <th>Status</th>
-          <th>Totalprice</th>
+          <th>TotalSalary</th>
+          <th>TotalAmount</th>
         </tr>
-
         {
           fdata.map((a, i) =>
-          <tr>
-              <td>{a.id}</td>
+            <tr>
               <td>{a.name}</td>
-              <td>{a.quantity}</td>
-              <td>{a.price}</td>
-              <td>{a.expiry}</td>
+              <td>{a.age}</td>
+              <td>{a.salary}</td>
+              <td>{a.bonus}</td>
               <td>{a.status.toString()}</td>
-              <td rowSpan={{totalprice ? 2 : 1 }}>{totalprice}</td>
+              <td>{a.salary + a.bonus}</td>
+              {i === 0 ? <td rowSpan={4}>{totalamount}</td> : null}
             </tr>
-
-)
+          )
         }
       </table>
     </div>
   );
-
 }
 
+
 export default App;
+  //   let data = [
+  //     {
+  //       id: 101,
+  //       name: 'Abacavir',
+  //       quantity: 25,
+  //       price: 150,
+  //       expiry: 2022,
+  //       status: true
+  //     },
+  //     {
+  //       id: 102,
+  //       name: 'Eltrombopag',
+  //       quantity: 90,
+  //       price: 550,
+  //       expiry: 2021,
+  //       status: true
+  //     },
+  //     {
+  //       id: 103,
+  //       name: 'Meloxicam',
+  //       quantity: 85,
+  //       price: 450,
+  //       expiry: 2025,
+  //       status: false
+  //     },
+  //     {
+  //       id: 104,
+  //       name: 'Allopurinol',
+  //       quantity: 50,
+  //       price: 600,
+  //       expiry: 2023,
+  //       status: true
+  //     },
+  //     {
+  //       id: 105,
+  //       name: 'Phenytoin',
+  //       quantity: 63,
+  //       price: 250,
+  //       expiry: 2021,
+  //       status: false
+  //     }
+  //   ];
+  //   let fdata = data.filter((a, i) => a.status === true && a.expiry >= 2022);
+
+  //   let totalprice = fdata.reduce((acc, p, i) => acc + p.price, 0);
+  //   console.log(totalprice)
+  //   return (
+  //     <div>
+  //       <table id="mytable" border="1">
+  //         <tr>
+  //           <th>Id</th>
+  //           <th>Name</th>
+  //           <th>Quantity</th>
+  //           <th>Price</th>
+  //           <th>Expiry</th>
+  //           <th>Status</th>
+  //           <th>Totalprice</th>
+  //         </tr>
+
+  //         {
+  //           fdata.map((a, i) =>
+  //           <tr>
+  //               <td>{a.id}</td>
+  //               <td>{a.name}</td>
+  //               <td>{a.quantity}</td>
+  //               <td>{a.price}</td>
+  //               <td>{a.expiry}</td>
+  //               <td>{a.status.toString()}</td>
+  //               {i === 0 ? <td rowSpan={2}>{totalprice}</td> : null}
+  //             </tr>
+
+  // )
+  //         }
+  //       </table>
+  //     </div>
+  //   );
+
+  // }
 // const person = {
 //   name: "Amit",
 //   age: 25
@@ -317,7 +389,5 @@ export default App;
 // console.log(arr3);
 
 // // destrucring
-
 // const[a,b,c,d,e] = arr1;
 // console.log(d);
-
