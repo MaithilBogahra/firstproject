@@ -3,81 +3,81 @@ import './App.css';
 import Demo from './component/Demo';
 
 function App() {
-  let data = [
-    {
-      name: "amit",
-      age: 35,
-      salary: 40000,
-      bonus: 1000,
-      status: true
-    },
-    {
-      name: "ajay",
-      age: 25,
-      salary: 38000,
-      bonus: 2000,
-      status: false
-    },
-    {
-      name: "mayur",
-      age: 23,
-      salary: 50000,
-      bonus: 500,
-      status: true
-    },
-    {
-      name: "jay",
-      age: 29,
-      salary: 35000,
-      bonus: 600,
-      status: true
-    },
-    {
-      name: "raj",
-      age: 33,
-      salary: 22000,
-      bonus: 2000,
-      status: true
-    }
-  ];
-
-  let fdata = data.filter((b, i) => b.status === true);
-
-  let totalamount = fdata.reduce((acc, t, i) => acc + t.salary + t.bonus, 0)
-
-  return (
-    <div>
-      <table border="1">
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Salary</th>
-          <th>Bonus</th>
-          <th>Status</th>
-          <th>TotalSalary</th>
-          <th>TotalAmount</th>
-        </tr>
-        {
-          fdata.map((a, i) =>
-            <tr>
-              <td>{a.name}</td>
-              <td>{a.age}</td>
-              <td>{a.salary}</td>
-              <td>{a.bonus}</td>
-              <td>{a.status.toString()}</td>
-              <td>{a.salary + a.bonus}</td>
-              {i === 0 ? <td rowSpan={4}>{totalamount}</td> : null}
-            </tr>
-          )
-        }
-      </table>
-    </div>
-  );
-}
-
-
-export default App;
+ 
   //   let data = [
+    //     {
+//       name: "amit",
+//       age: 35,
+//       salary: 40000,
+//       bonus: 1000,
+//       status: true
+//     },
+//     {
+//       name: "ajay",
+//       age: 25,
+//       salary: 38000,
+//       bonus: 2000,
+//       status: false
+//     },
+//     {
+  //       name: "mayur",
+//       age: 23,
+//       salary: 50000,
+//       bonus: 500,
+//       status: true
+//     },
+//     {
+//       name: "jay",
+//       age: 29,
+//       salary: 35000,
+//       bonus: 600,
+//       status: true
+//     },
+//     {
+//       name: "raj",
+//       age: 33,
+//       salary: 22000,
+//       bonus: 2000,
+//       status: true
+//     }
+//   ];
+
+//   let fdata = data.filter((b, i) => b.status === true);
+
+//   let totalamount = fdata.reduce((acc, t, i) => acc + t.salary + t.bonus, 0)
+
+//   return (
+//     <div>
+//       <table border="1">
+//         <tr>
+//           <th>Name</th>
+//           <th>Age</th>
+//           <th>Salary</th>
+//           <th>Bonus</th>
+//           <th>Status</th>
+//           <th>TotalSalary</th>
+//           <th>TotalAmount</th>
+//         </tr>
+//         {
+//           fdata.map((a, i) =>
+//             <tr>
+//               <td>{a.name}</td>
+//               <td>{a.age}</td>
+//               <td>{a.salary}</td>
+//               <td>{a.bonus}</td>
+//               <td>{a.status.toString()}</td>
+//               <td>{a.salary + a.bonus}</td>
+//               {i === 0 ? <td rowSpan={4}>{totalamount}</td> : null}
+//             </tr>
+//           )
+//         }
+//       </table>
+//     </div>
+//   );
+// }
+
+
+//   let data = [
   //     {
   //       id: 101,
   //       name: 'Abacavir',
@@ -95,7 +95,7 @@ export default App;
   //       status: true
   //     },
   //     {
-  //       id: 103,
+    //       id: 103,
   //       name: 'Meloxicam',
   //       quantity: 85,
   //       price: 450,
@@ -135,50 +135,50 @@ export default App;
   //           <th>Status</th>
   //           <th>Totalprice</th>
   //         </tr>
-
+  
   //         {
-  //           fdata.map((a, i) =>
-  //           <tr>
-  //               <td>{a.id}</td>
-  //               <td>{a.name}</td>
+    //           fdata.map((a, i) =>
+    //           <tr>
+    //               <td>{a.id}</td>
+    //               <td>{a.name}</td>
   //               <td>{a.quantity}</td>
   //               <td>{a.price}</td>
   //               <td>{a.expiry}</td>
   //               <td>{a.status.toString()}</td>
   //               {i === 0 ? <td rowSpan={2}>{totalprice}</td> : null}
   //             </tr>
-
+  
   // )
   //         }
   //       </table>
   //     </div>
   //   );
-
+  
   // }
 // const person = {
-//   name: "Amit",
-//   age: 25
-// }
-// console.log(person.name,person.age);
-// const person = [
-//   {
-//     name: "Amit",
+  //   name: "Amit",
+  //   age: 25
+  // }
+  // console.log(person.name,person.age);
+  // const person = [
+    //   {
+      //     name: "Amit",
 //     age: 25,
 //   },
 //   {
-//     name: "Piyush",
-//     age: 40,
-//   }
-// ];
+  //     name: "Piyush",
+  //     age: 40,
+  //   }
+  // ];
 
-// person.map((p) => {
-//   console.log(p.name,p.age);
-// })
-
+  // person.map((p) => {
+    //   console.log(p.name,p.age);
+    // })
+    
 // const person = {
-//   name: "Amit",
-//   age: 25,
-//   course: [
+  //   name: "Amit",
+  //   age: 25,
+  //   course: [
 //     "C",
 //     "HTML"
 //   ]
@@ -186,15 +186,15 @@ export default App;
 
 // console.log(person.name,person.age);
 // person.course.map((c) =>{
-// console.log(c);
+  // console.log(c);
 // })
 
 // const person = [
 //   {
-//     name: "Amit",
+  //     name: "Amit",
 //     age: 25,
 //     course: [
-//       "C",
+  //       "C",
 //       "HTML"
 //     ]
 //   },
@@ -202,32 +202,32 @@ export default App;
 //     name: "Ajay",
 //     age: 40,
 //     course: [
-//       "Java",
-//       "JavaScript"
-//     ]
-//   }
+  //       "Java",
+  //       "JavaScript"
+  //     ]
+  //   }
 // ]
 // person.map((p) =>{
-//   console.log(p.name,p.age);
-//   p.course.map((p1)=>{
-//     console.log(p1);
+  //   console.log(p.name,p.age);
+  //   p.course.map((p1)=>{
+    //     console.log(p1);
 //   })
 // })
 
 // const myObj = {
-//   name: "John",
-//   age: 30,
-//   cars: {
-//     car1: "Ford",
-//     car2: "BMW",
-//     car3: "Fiat"
+  //   name: "John",
+  //   age: 30,
+  //   cars: {
+    //     car1: "Ford",
+  //     car2: "BMW",
+  //     car3: "Fiat"
 //   }
 // };
 // console.log(myObj.name, myObj.age, myObj.cars.car1, myObj.cars.car2, myObj.cars.car3)
 // let cars;
 // for (let k in myObj) {
-//   if (myObj[k] == myObj.cars) {
-//     for (let j in myObj.cars) {
+  //   if (myObj[k] == myObj.cars) {
+    //     for (let j in myObj.cars) {
 //       console.log(myObj.cars[j]);
 //     }
 //   } else {
@@ -236,27 +236,27 @@ export default App;
 // }
 
 // let data = {
-//     personal_info: {
-//       name: "maithil",
-//       age: 25,
-//       city: "surat"
+  //     personal_info: {
+    //       name: "maithil",
+    //       age: 25,
+    //       city: "surat"
 //     },
 //     course: ["C", "javaScript", "React"],
 //     branches: {
-//       rw1: {
-//         admission: 50,
-//         vacant_seat: 10
-//       },
-//       rw2: {
-//         admission: 30,
-//         vacant_seat: 20
-//       },
-//       rw3: {
-//         admission: 25,
-//         vacant_seat: 26
+  //       rw1: {
+    //         admission: 50,
+    //         vacant_seat: 10
+    //       },
+    //       rw2: {
+      //         admission: 30,
+      //         vacant_seat: 20
+  //       },
+  //       rw3: {
+    //         admission: 25,
+    //         vacant_seat: 26
 //       },
 //       rw4: {
-//         admission: 40,
+  //         admission: 40,
 //         vacant_seat: 10
 //       },
 //     }
@@ -265,37 +265,37 @@ export default App;
 // for (let i in data) {
 //   if (data[i] == data.personal_info) {
 //     for (let j in data.personal_info) {
-//       console.log(j, data.personal_info[j]);
-//     }
+  //       console.log(j, data.personal_info[j]);
+  //     }
 //   } else if (data[i] == data.course) {
-//     // for (let k in data.course) {
+  //     // for (let k in data.course) {
 //     //   console.log(k,data.course[k]);
 //     // }
 //     data.course.map((p) => {
-//       console.log(p);
+  //       console.log(p);
 //     })
 
 //   } else if (data[i] == data.branches) {
-//     for (let m in data.branches) {
-//       // console.log(data.branches[m]);
-//       if (data.branches[m] == data.branches.rw1) {
-//         for (let a in data.branches.rw1) {
-//           console.log(a, data.branches.rw1[a]);
-//         }
-//       }
+  //     for (let m in data.branches) {
+    //       // console.log(data.branches[m]);
+    //       if (data.branches[m] == data.branches.rw1) {
+      //         for (let a in data.branches.rw1) {
+        //           console.log(a, data.branches.rw1[a]);
+        //         }
+        //       }
 //       if (data.branches[m] == data.branches.rw2) {
-//         for (let b in data.branches.rw2) {
-//           console.log(b, data.branches.rw2[b]);
-//         }
+  //         for (let b in data.branches.rw2) {
+    //           console.log(b, data.branches.rw2[b]);
+    //         }
 //       }
 //       if (data.branches[m] == data.branches.rw3) {
-//         for (let c in data.branches.rw3) {
+  //         for (let c in data.branches.rw3) {
 //           console.log(c, data.branches.rw3[c]);
 //         }
 //       }
 //       if (data.branches[m] == data.branches.rw4) {
-//         for (let d in data.branches.rw4) {
-//           console.log(d, data.branches.rw4[d]);
+  //         for (let d in data.branches.rw4) {
+    //           console.log(d, data.branches.rw4[d]);
 //         }
 //       }
 
@@ -304,8 +304,8 @@ export default App;
 // }
 
 // let data = [
-//   {
-//     personal_info: {
+  //   {
+    //     personal_info: {
 //       name: "maithil",
 //       age: 25,
 //       city: "surat"
@@ -317,8 +317,8 @@ export default App;
 //         vacant_seat: 10
 //       },
 //       rw2: {
-//         admission: 30,
-//         vacant_seat: 20
+  //         admission: 30,
+  //         vacant_seat: 20
 //       },
 //       rw3: {
 //         admission: 25,
@@ -334,14 +334,14 @@ export default App;
 
 
 // data.map((g) => {
-//   for (let i in g) {
-//     if (g[i] == g.personal_info) {
-//       for (let j in g.personal_info) {
-//         console.log(j, g.personal_info[j]);
-//       }
+  //   for (let i in g) {
+    //     if (g[i] == g.personal_info) {
+      //       for (let j in g.personal_info) {
+        //         console.log(j, g.personal_info[j]);
+        //       }
 //     } else if (g[i] === g.course) {
-//       // for (let k in g.course) {
-//       //   console.log(k,g.course[k]);
+  //       // for (let k in g.course) {
+    //       //   console.log(k,g.course[k]);
 //       // }
 //      g.course.map((p) => {
 //         console.log(p);
@@ -352,26 +352,26 @@ export default App;
 //         // console.log(data.branches[m]);
 //         if (g.branches[m] === g.branches.rw1) {
 //           for (let a in g.branches.rw1) {
-//             console.log(a, g.branches.rw1[a]);
-//           }
-//         }
-//         if (g.branches[m] === g.branches.rw2) {
-//           for (let b in g.branches.rw2) {
-//             console.log(b, g.branches.rw2[b]);
+  //             console.log(a, g.branches.rw1[a]);
+  //           }
+  //         }
+  //         if (g.branches[m] === g.branches.rw2) {
+  //           for (let b in g.branches.rw2) {
+    //             console.log(b, g.branches.rw2[b]);
 //           }
 //         }
 //         if (g.branches[m] === g.branches.rw3) {
-//           for (let c in g.branches.rw3) {
-//             console.log(c, g.branches.rw3[c]);
-//           }
+  //           for (let c in g.branches.rw3) {
+    //             console.log(c, g.branches.rw3[c]);
+    //           }
 //         }
 //         if (g.branches[m] === g.branches.rw4) {
-//           for (let d in g.branches.rw4) {
-//             console.log(d, g.branches.rw4[d]);
-//           }
-//         }
-
-//       }
+  //           for (let d in g.branches.rw4) {
+    //             console.log(d, g.branches.rw4[d]);
+    //           }
+    //         }
+    
+    //       }
 //     }
 //   }
 // });
@@ -391,3 +391,36 @@ export default App;
 // // destrucring
 // const[a,b,c,d,e] = arr1;
 // console.log(d);
+
+
+// object spreding
+
+let obj1 ={
+  id:101,
+  name:"maithil"
+};
+console.log(obj1);
+
+// COPY
+
+let obj2 = {
+  ...obj1
+}
+console.log(obj2);
+
+// merge
+
+let obj3 = {
+  ...obj1,
+  id:102,
+  name: "boghara",
+  location:"surat"
+};
+console.log(obj3);
+
+
+
+
+
+}
+export default App;
