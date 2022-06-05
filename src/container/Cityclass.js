@@ -20,6 +20,7 @@ export default class Cityclass extends Component {
         <h1>City Class base components </h1>
         <p>{this.state.countryName}</p>
         <button onClick={() =>this.changeCity()}>Change City</button>
+        <p>{this.props.id} {this.props.Country_Name}</p>
       </div>
     )
   }

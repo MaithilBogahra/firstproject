@@ -4,7 +4,7 @@ function Cityfun(props) {
     const [City,setCityfun] = useState('Surat')
 
     const changeCity = () =>{
-        setCityfun('US')
+        setCityfun('US');
     }
 
     return (
@@ -12,6 +12,7 @@ function Cityfun(props) {
         <h1>City function based components</h1>
         <p>{City}</p>
         <button onClick={() =>changeCity()}>Change City</button>
+            <p>{props.id} {props.countryName}</p>
         </div>
     );
 }

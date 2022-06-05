@@ -7,10 +7,10 @@ import Funbase from './container/Funbase';
 function App(props) {
   return (
     <div>
-      {/* <Countryclassbased /> */}
+      <Countryclassbased />
       {/* <Funbase /> */}
       {/* <Cityclass /> */}
-      <Cityfun />
+      {/* <Cityfun /> */}
 
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cityclass from './Cityclass';
 
 export default class Countryclassbased extends Component {
 
@@ -6,12 +7,14 @@ export default class Countryclassbased extends Component {
         super(props);
 
         this.state = {
-            countryName : 'India'
+            countryName : 'India',
+           
         }
     }
     changeCountry =() => {
-        this.setstate ({
-            countryName :'US'
+        this.setState ({
+            countryName :'US',
+           
         })
     }
   render() {
@@ -19,7 +22,9 @@ export default class Countryclassbased extends Component {
       <div>
         <h1>Country class based components</h1>
         <p>{this.state.countryName}</p>
+        <p>{this.state.place}</p>
         <button onClick={() => this.changeCountry()}>ChangeCountry</button>
+        <Cityclass id="7290" Country_Name={this.state.countryName} />
       </div>
     )
   }
