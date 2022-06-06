@@ -24,7 +24,7 @@ export default class Countryclassbased extends Component {
         <p>{this.state.countryName}</p>
         <p>{this.state.place}</p>
         <button onClick={() => this.changeCountry()}>ChangeCountry</button>
-        <Cityclass id="7290" Country_Name={this.state.countryName} />
+        <Cityclass id="7290" Country_Name={this.state.countryName ==='India' ? 'Tajmahel':'Stute'} />
       </div>
     )
   }
