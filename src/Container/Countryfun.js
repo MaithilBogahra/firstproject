@@ -13,7 +13,7 @@ function Funbase(props) {
             <h1>country function based components</h1>
             <h4>{countryName}</h4>
             <button onClick={() => changeCountry()}>ChangeCountry</button>
-            <Cityfun id="7291" Country_name={countryName === 'India' ? 'TajMahel':'Stute'} />
+            <Cityfun id="7290" Country_name={countryName === 'India' ? "TajMahel":"Stute"} />
         </div>
     );
 }
