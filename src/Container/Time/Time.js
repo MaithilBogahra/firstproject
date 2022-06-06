@@ -20,7 +20,7 @@ this.setState({
     }
     
     componentDidUpdate = (prevProps , prevState) =>{
-if(this.state.Time !== prevState.Time){
+    if(this.state.Time !== prevState.Time){
     console.log("ComponentDidUpdate");
 }
     }
