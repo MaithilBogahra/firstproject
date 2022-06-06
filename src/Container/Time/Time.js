@@ -19,11 +19,11 @@ this.setState({
         this.TimeI = setInterval(() => this.tick(),1000)
     }
     
-    componentDidUpdate = (prevProps , prevState) =>{
-    if(this.state.Time !== prevState.Time){
-    console.log("ComponentDidUpdate");
-}
-    }
+//     componentDidUpdate = (prevProps , prevState) =>{
+//     if(this.state.Time !== prevState.Time){
+//     console.log("ComponentDidUpdate");
+// }
+//     }
 
     componentWillUnmount = () => {
         clearInterval(this.TimeI)
