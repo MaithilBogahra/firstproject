@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-import Countryclass from './Container/Countryclass';
-import Countryfun from './Container/Countryfun';
-import Cityclass from './Container/Cityclass';
-import Cityfun from './Container/Cityfun';
-import Time from './Container/Time/Time';
-import Counter from './Container/Counter';
-import Timefun from './Container/Time/Timefun';
+import React, { useEffect, useState } from 'react';
+import Loading from './Container/Loading';
+import Home from './Container/Home';
 
-function App() {
+const LoadingWithhome = Loading(Home);
+
+function App(props) {
+
+
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+
+  const orgdata = [
+    { id: 7290, name: "Maithil" },
+    { id: 6806, name: "Kartik" },
+    { id: 4879, name: "Ritik" }
+  ]
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {setLoading(false); setData(orgdata)}, 2000);
+  }, [])
+
+
   return (
     <div>
-      {/* <Counter /> */}
-      <Timefun />
-      {/* <Time /> */}
-     {/* <Countryclass /> */}
-      {/* <Countryfun /> */}
-     {/* <Cityclass /> */}
-     {/* <Cityfun />  */}
+      <LoadingWithhome
+        isLoading={loading}
+        data={data}
+      />
     </div>
   );
 }
