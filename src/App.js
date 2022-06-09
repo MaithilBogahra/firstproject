@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './Container/Loading';
 import Home from './Container/Home';
+import Counter from './Container/Counter';
 
 const LoadingWithhome = Loading(Home);
 
@@ -28,6 +29,7 @@ function App(props) {
         isLoading={loading}
         data={data}
       />
+      <Counter />
     </div>
   );
 }

@@ -4,15 +4,16 @@ function Counter(props) {
     const [counter, setCounter] = useState(0);
 
     const incrementCounter = () => {
-        if(counter <= 10){
-            setCounter(counter + 1);
+        if(counter < 10){
+            setCounter(counter + 1)
         }
     }
 
     const decrementCounter = () => {
         if (counter > 0) {
-            setCounter(counter - 1);
+            setCounter(counter - 1)
         } 
+    }
         
     return (
         <div>
@@ -24,6 +25,6 @@ function Counter(props) {
         </div>
     );
 }
-}
+
 
 export default Counter;
