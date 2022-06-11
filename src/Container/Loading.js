@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 function Loading(Component) {
-    return function LoadinHome({isLoading,data}){
+    return function LoadingHome({isLoading,data}){
         if(isLoading){
             return(
             <h1>Loading....</h1>
