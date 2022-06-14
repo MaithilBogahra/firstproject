@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 function Loading(Component) {
-    return function LoadingHome({isLoading,data}){
-        if(isLoading){
+    return function EmployeeHome({ourLoading,data}){
+        if(ourLoading){
             return(
-            <h1>Loading....</h1>
+            <h1>Employee Data Loading....</h1>
             )
         }else{
             return(
